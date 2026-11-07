@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Design tokens. Tailwind v4 turns each --color-* into utilities
+   such as bg-ink, text-lake and border-line. */
+@theme {
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --color-paper: #f7f8f6;
+  --color-ink: #12263a;
+  --color-lake: #0f766e;
+  --color-glacier: #e3edef;
+  --color-line: #d3dde0;
+  --color-sun: #f0b544;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-lake);
+  outline-offset: 3px;
+}
